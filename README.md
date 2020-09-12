@@ -8,3 +8,5 @@ I has a simple home page and will use the following packages (it's a work in pro
 
 It has one app called common that holds the User model.
 The user model uses an email address to login (instead of a username).
+
+# TODO: the first migration should install postgres extensions
