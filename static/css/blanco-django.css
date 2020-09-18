@@ -1,0 +1,6 @@
+
+
+/* in alerts, the close button should not get an outline when focussed */
+button.close {
+    outline: none;
+}

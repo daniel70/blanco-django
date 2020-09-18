@@ -1,0 +1,13 @@
+{% load i18n %}
+{% for message in messages %}
+<div class="row justify-content-lg-center my-2">
+  <div class="col-lg-6">
+    <div class="{{ message.tags }} alert-dismissible fade show" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="{% trans 'close' %}">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      {{ message }}
+    </div>
+  </div>
+</div>
+{% endfor %}

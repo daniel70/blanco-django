@@ -87,6 +87,17 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+# override the messages for bootstrap classes
+# https://docs.djangoproject.com/en/dev/ref/contrib/messages/#message-tags
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.DEBUG: "alert alert-warning",
+    messages.INFO: "alert alert-info",
+    messages.SUCCESS: "alert alert-success",
+    messages.WARNING: "alert alert-warning",
+    messages.ERROR: "alert alert-danger",
+}
+
 if ENV == 'dev':
     ALLOWED_HOSTS.append("*")
     # INSTALLED_APPS.append('debug_toolbar')
